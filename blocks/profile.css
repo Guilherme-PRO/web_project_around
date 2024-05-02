@@ -1,0 +1,70 @@
+.profile{
+    display: flex;
+    position: relative;
+    width: 880px;
+    height: 100%;
+    left: 200px;
+    margin: 0 0 50px 0;
+}
+.profile__avatar{
+    display: flex;
+    position: relative;
+    background: #C4C4C4;
+    border-radius: 50%;
+    width: 120px;
+   height: 100%;
+    margin:0;
+}
+.edit__avatar{
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    text-align: center;
+    margin: auto ;
+    width: 415px;
+    height: 77px;
+}
+.edit__avatar_title{
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+
+}
+.edit__avater_subtitle{
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: left;
+    border: 1px;
+}
+.edit__avatar_edit{
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 20px;
+    left: 318px;
+    top:-50px;
+    border: 1px  solid #FFFFFF;
+    cursor: pointer;
+}
+.profile__add{
+    display: flex;
+    margin:auto 0;
+}
+@media screen  and (max-width: 320px) {
+.profile{
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    height: 286px;
+    top: 126px;
+    left: 19px;
+    gap: 0px;
+    opacity: 0px;
+    }
+}
