@@ -23,15 +23,19 @@
             </form>
         </section>
         <header class="header">
-            <img src="./image/VectorlogoAround.png" alt="logo da magina" class="logo">
+            <img src="./image/VectorlogoAround.png" alt="logo da magina" class="header__line_logo">
+            <div class="header__line">
+            </div>
         </header>
         <main class="main">
             <section class="profile">
                 <img src="./image/imageperfil02.png" alt="foto-avatar" class="profile__avatar">
                 <div class="edit__avatar">
-                    <h1 class="edit__avatar_title">Jacques Cousteau</h1>
+                    <div class="edit__avatar__edit">
+                        <h1 class="edit__avatar__edit_title">Jacques Cousteau</h1>
+                        <img src="./image/Edit Buttoncaixaidt.png" alt="btn-edit" class="edit__avatar__edit_img">
+                    </div>
                     <h2 class="edit__avater_subtitle">Explorador</h2>
-                    <img src="./image/Edit Buttoncaixaidt.png" alt="btn-edit" class="edit__avatar_edit">
                 </div>
                 <img src="./image/Add Buttoncaixa+.png" alt="btn-adicionar" class="profile__add">
             </section>
@@ -41,7 +45,7 @@
                         <img src="./image/kirill-pershin-1088404-unsplash.png" alt="img-Yosemite" class="element__img">
                         <div class="element__card">
                             <h2 class="element__card_title">vale de Yosemite</h2>
-                            <img src="./image/Groupcoraçãoz.png" alt="like" class="element__card_like">
+                            <img src="./image/Groupcoraçãoz.png" alt="like" class="element__card_like element__card_like-dark">
                         </div>
                     </li>
                     <li class="element">
@@ -85,7 +89,7 @@
         </main>
         <footer class="footer">
             <div class="footer__copyright">
-                <p>&copy;2024 Around the U.S.</p>
+                <p class="footer__copyright_copy">&copy;2024 Around the U.S.</p>
             </div>
         </footer>
         <script src="./js/index.js"></script>

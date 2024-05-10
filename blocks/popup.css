@@ -2,26 +2,27 @@
     display: flex;
     flex-direction: column;
     position: fixed;
+    align-items: center;
+    visibility: hidden;
     top: 0;
     left: 0;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
     opacity: 0;
-    visibility: hidden;
 }
 
 .popup__opened {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     z-index: 100;
+    transition: 100;
 }
 
 .popup__overlay {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,10 +33,12 @@
     position: absolute;
     cursor: pointer;
     color: aliceblue;
-    width: 4vh;
-    height: 4vh;
-    top: 187px;
-    left: 880px;
+    top: 210px;
+    left: 860px;
+    
+}
+.close:hover{
+    opacity: 60%;
 }
 
 .popup__form {
@@ -43,11 +46,12 @@
     align-items: center;
     flex-direction: column;
     background: #fff;
+    max-width: 880px;
     width: 430px;
     height: 330px;
     border-radius: 10px;
-    padding: 0 20px;
-    margin:  auto;
+    
+    margin: auto auto ;
     position: relative;
     z-index: 100;
     overflow: hidden;
@@ -70,10 +74,11 @@
     height: 27.26px;
     border: 1px;
     border: none;
-    border-bottom: 1px solid rgb(11, 8, 8);
+    border-bottom: 1px solid rgb(181, 181, 181);
     outline: none;
     padding: 0;
     margin: 0 0 30px 0;
+   
 }
 
 .popup__form_input-job {
@@ -82,7 +87,7 @@
     border: 1px;
     border: none;
     margin: 0 0 48px;
-    border-bottom: 1px solid rgb(11, 8, 8);
+    border-bottom: 1px solid rgb(181, 181, 181);
     outline: none;
     padding: 0;
 }
@@ -101,9 +106,65 @@
     cursor: pointer;
     padding: 0;
 }
+.popup__form_bnt-submit:hover{
+    opacity: 80%;
+}
 
 .element__card {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+@media screen and (max-width:800px) {
+.close{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    color: aliceblue;
+    width: 4vh;
+    height: 4vh;
+    top: 21vh;
+    left: 92.5vh;
+    }
+    .popup{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .popup{
+        width: 100%;
+    }
+    .close{
+        width: 26px;
+        height: 26px;
+        top: 125px;
+        left: 284px;
+        margin: auto;
+    }
+    .popup__form{
+        display: flex;
+        margin: auto;
+        width: 264px;
+        height: 322px;
+    }
+    .popup__title{
+        width: 100%;
+        margin: auto;
+    }
+    .popup__form_input-name{
+        width: 100%;
+        margin: auto;
+    }
+    .popup__form_input-job{
+        width: 100%;
+        margin: auto;
+    
+    }
+    .popup__form_bnt-submit {
+        width: 100%;
+        margin: auto;
+    }
 }
