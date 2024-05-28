@@ -1,67 +1,171 @@
 .profile{
     display: flex;
     width:100%;
-    align-items: center;
     margin-bottom: 50px;
     gap: 30px;
 }
-.profile__avatar{
+.profile__new{
     display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+}
+.profile__new_avatar{
+    
     background: #C4C4C4;
     border-radius: 50%;
-    width: 18vh;
+    width: 120px;
 }
-.edit__avatar{
+.profile__new__edit{
     display:flex;
     flex-direction:column;
     width: 100%;
-    white-space: nowrap;
     margin: 0;
 }
-.edit__avatar__edit{
+.profile__new__edit__avatar{
     display: flex;
+    width: auto;
     margin:0;
     gap: 20px;
 }    
-.edit__avatar__edit_title{
+.profile__new__edit__avatar_title{
     display: flex;
     margin: 0;
     font-family: 'Inter';
-    font-size: 3em;
+    font-size: 3.3em;
     font-weight: 500;
     line-height: 56px;
 }
-.edit__avatar__edit_img{
+.profile__new__edit__avatar_edit{
     display:flex;
-    margin: auto 0;
-    margin-top: 20px;
+    width: 24px;
+    height: 24px;
+    margin: 20px 0;
     cursor:pointer;
 }
-.edit__avatar__edit_img:hover{
+.profile__new__edit__avatar_edit:hover{
     opacity: 60%;
 }
-.edit__avater_subtitle{
+.profile__new__edit_subtitle{
     margin: 10px 0 0 0;
     font-family: 'Inter';
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;
-    text-align: left;
-    border: 1px;
 }
-.profile__add{
+.profile__new_add{
     display: flex;
-    margin: 0 auto;
+    position: relative;
+    justify-content: center;
     cursor: pointer;
+    width: 150px;
+    height:50px;
+    
 }
-.profile__add:hover{
+.profile__new_add:hover{
     opacity: 60%;
 }
 
 @media screen and (max-width:800px) {
-
+    .profile{
+        width: 100%;
+        display: flex;
+    }
+    .profile__new{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+    .profile__new_avatar{
+        width: 120px;
+    }
+    .profile__new__edit{
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
+    .profile__new__edit__avatar{
+        display: flex;
+        width: auto;
+        gap: 5px;
+    }
+    .profile__new__edit__avatar_title{
+        display: flex;
+        width: 100%;
+        font-size: 1.2em;
+        margin: 0;
+        font-weight: 40;
+        line-height: 14px;
+    }
+    .profile__new__edit__avatar_edit{
+        margin:0;
+        width: 2.2vh;
+        height: 1.89vh;
+    }
+    .profile__new__edit_subtitle{
+        display: flex;
+        width: 100%;
+        font-size: 0.8em;
+        margin: 0 auto;
+    }
+    .profile__new_add{
+        display: flex;
+        width:80px;
+        height: 30px;
+    }
 }
 
 @media screen  and (max-width: 320px) {
-   
+    .profile{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+    .profile__new{
+        display: flex;
+        flex-direction: column;
+        margin: 0 19px 0;
+        width: 100%;
+    }
+    .profile__new_avatar{
+        width: 120px;
+    }
+    .profile__new__edit{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        justify-content: center ;
+    }
+    .profile__new__edit__avatar{
+        display: flex;
+        gap: 10px;
+        width:auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile__new__edit__avatar_title{
+        display: flex;
+        justify-content: center;
+        width: auto;
+        font-size: 1.2em;
+        font-weight: 40;
+        line-height: 14px;
+    }
+    .profile__new__edit__avatar_edit{
+        margin:0; 
+        width: 2.2vh;
+        height: 1.89vh;
+    }
+    .profile__new__edit_subtitle{
+        justify-content: center;
+        display: flex;
+        font-size: 0.8em;
+        margin: 0 auto;
+    }
+    .profile__new_add{
+        display: flex;
+        width:100%;
+        height: 75px;
+}
 }

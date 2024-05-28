@@ -33,7 +33,7 @@
     position: absolute;
     cursor: pointer;
     color: aliceblue;
-    top: 210px;
+    top: 330px;
     left: 860px;
     
 }
@@ -50,7 +50,6 @@
     width: 430px;
     height: 330px;
     border-radius: 10px;
-    
     margin: auto auto ;
     position: relative;
     z-index: 100;
@@ -127,27 +126,59 @@
     top: 21vh;
     left: 92.5vh;
     }
-    .popup{
-        width: 100%;
-    }
+.popup{
+    width: 100%;
+}
+.popup__form{
+    display: flex;
+    padding: 0 19px 0;
+    width: 244px;
+    height: 322px;
+}
+.close{
+    display: flex;
+    width: 26px;
+    height: 26px;
+    top: 155px;
+    left:545px;
+}
+.popup__title{
+    width: 100%;
+    margin: auto;
+}
+.popup__form_input-name{
+    width: 100%;
+    margin: auto;
+}
+.popup__form_input-job{
+    width: 100%;
+    margin: auto;
+
+}
+.popup__form_bnt-submit {
+    width: 100%;
+    margin: auto;
+}
 }
 
 
 @media screen and (max-width: 320px) {
     .popup{
         width: 100%;
+        display: flex;
     }
     .close{
+        display: flex;
         width: 26px;
         height: 26px;
-        top: 125px;
-        left: 284px;
-        margin: auto;
+        top: 325px;
+        left:465px;
     }
     .popup__form{
         display: flex;
         margin: auto;
-        width: 264px;
+        padding: 0 19px 0;
+        width: 244px;
         height: 322px;
     }
     .popup__title{

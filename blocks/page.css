@@ -1,8 +1,8 @@
 .page{
     background-color: #000000;
     color: #ffff;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 1280px;
+    min-width: 320px;
     background-size: cover;
     display: flex;
     flex-direction: column;

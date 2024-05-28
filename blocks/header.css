@@ -18,10 +18,26 @@
 }
 
 @media screen and (max-width:800px) {
-
+  .header{
+    display: flex;
+    width: 100%;
+  }
+  .header__line{
+    display: flex;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 320px) {
   
-
+  .header{
+    display: flex;
+    width: 100%;
+   
+  }
+  .header__line{
+    display: flex;
+    width: 100%;
+  }
+  
 }
