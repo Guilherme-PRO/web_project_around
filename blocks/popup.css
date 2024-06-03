@@ -33,11 +33,11 @@
     position: absolute;
     cursor: pointer;
     color: aliceblue;
-    top: 330px;
+    top: 185px;
     left: 860px;
     
 }
-.close:hover{
+.popup__close:hover{
     opacity: 60%;
 }
 
@@ -56,7 +56,7 @@
     overflow: hidden;
 }
 
-.popup__form_title {
+.popup__title {
     font-family: 'Inter';
     font-size: 24px;
     font-weight: 900;
@@ -68,7 +68,7 @@
 
 }
 
-.popup__form_input-name {
+.popup__input--name {
     width: 358px;
     height: 27.26px;
     border: 1px;
@@ -80,7 +80,7 @@
    
 }
 
-.popup__form_input-job {
+.popup__input--job {
     width: 358px;
     height: 27.26px;
     border: 1px;
@@ -91,7 +91,7 @@
     padding: 0;
 }
 
-.popup__form_bnt-submit {
+.popup__button--submit {
     display: flex;
     position: relative;
     justify-content: center;
@@ -105,7 +105,7 @@
     cursor: pointer;
     padding: 0;
 }
-.popup__form_bnt-submit:hover{
+.popup__button--submit:hover{
     opacity: 80%;
 }
 
@@ -132,20 +132,20 @@
     top: 155px;
     left:545px;
 }
-.popup__form_title{
+.popup__title{
     width: 100%;
     margin: auto;
 }
-.popup__form_input-name{
+.popup__input--name{
     width: 100%;
     margin: auto;
 }
-.popup__form_input-job{
+.popup__input--job{
     width: 100%;
     margin: auto;
 
 }
-.popup__form_bnt-submit {
+.popup__button--submit{
     width: 100%;
     margin: auto;
 }
@@ -161,30 +161,30 @@
         display: flex;
         width: 26px;
         height: 26px;
-        top: 325px;
+        top: 585px;
         left:465px;
     }
     .popup__form{
         display: flex;
-        margin: auto;
+        margin:auto ;
         padding: 0 19px 0;
         width: 244px;
         height: 322px;
     }
-    .popup__form_title{
+    .popup__title{
         width: 100%;
         margin: auto;
     }
-    .popup__form_input-name{
+    .popup__input--name{
         width: 100%;
         margin: auto;
     }
-    .popup__form_input-job{
+    .popup__input--job{
         width: 100%;
         margin: auto;
     
     }
-    .popup__form_bnt-submit {
+    .popup__button--submit {
         width: 100%;
         margin: auto;
     }
