@@ -28,7 +28,7 @@
     left: 0;
 }
 
-.close {
+.popup__close {
     display: flex;
     position: absolute;
     cursor: pointer;
@@ -50,13 +50,13 @@
     width: 430px;
     height: 330px;
     border-radius: 10px;
-    margin: auto auto ;
+    margin:auto;
     position: relative;
     z-index: 100;
     overflow: hidden;
 }
 
-.popup__title {
+.popup__form_title {
     font-family: 'Inter';
     font-size: 24px;
     font-weight: 900;
@@ -116,16 +116,6 @@
 }
 
 @media screen and (max-width:800px) {
-.close{
-    display: flex;
-    position: absolute;
-    cursor: pointer;
-    color: aliceblue;
-    width: 4vh;
-    height: 4vh;
-    top: 21vh;
-    left: 92.5vh;
-    }
 .popup{
     width: 100%;
 }
@@ -135,14 +125,14 @@
     width: 244px;
     height: 322px;
 }
-.close{
+.popup__close{
     display: flex;
     width: 26px;
     height: 26px;
     top: 155px;
     left:545px;
 }
-.popup__title{
+.popup__form_title{
     width: 100%;
     margin: auto;
 }
@@ -167,7 +157,7 @@
         width: 100%;
         display: flex;
     }
-    .close{
+    .popup__close{
         display: flex;
         width: 26px;
         height: 26px;
@@ -181,7 +171,7 @@
         width: 244px;
         height: 322px;
     }
-    .popup__title{
+    .popup__form_title{
         width: 100%;
         margin: auto;
     }

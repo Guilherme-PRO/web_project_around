@@ -153,9 +153,8 @@
         line-height: 14px;
     }
     .profile__new__edit__avatar_edit{
-        margin:0; 
         width: 2.2vh;
-        height: 1.89vh;
+        height:2.2vh;
     }
     .profile__new__edit_subtitle{
         justify-content: center;

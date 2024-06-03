@@ -1,5 +1,5 @@
 
-const closeButton = document.querySelector('.close');
+const closeButton = document.querySelector('.popup__close');
 const openButton = document.querySelector('.profile__new__edit__avatar_edit');
 const overlay = document.querySelector('.popup__overlay');
 const popup = document.querySelector('.popup');
