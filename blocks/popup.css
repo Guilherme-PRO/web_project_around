@@ -68,7 +68,7 @@
 
 }
 
-.popup__input--name {
+.popup__input-name {
     width: 358px;
     height: 27.26px;
     border: 1px;
@@ -80,7 +80,7 @@
    
 }
 
-.popup__input--job {
+.popup__input-job {
     width: 358px;
     height: 27.26px;
     border: 1px;
@@ -91,7 +91,7 @@
     padding: 0;
 }
 
-.popup__button--submit {
+.popup__button-submit {
     display: flex;
     position: relative;
     justify-content: center;
@@ -105,7 +105,7 @@
     cursor: pointer;
     padding: 0;
 }
-.popup__button--submit:hover{
+.popup__button-submit:hover{
     opacity: 80%;
 }
 
@@ -136,16 +136,16 @@
     width: 100%;
     margin: auto;
 }
-.popup__input--name{
+.popup__input-name{
     width: 100%;
     margin: auto;
 }
-.popup__input--job{
+.popup__input-job{
     width: 100%;
     margin: auto;
 
 }
-.popup__button--submit{
+.popup__button-submit{
     width: 100%;
     margin: auto;
 }
@@ -174,16 +174,16 @@
         width: 100%;
         margin: auto;
     }
-    .popup__input--name{
+    .popup__input-name{
         width: 100%;
         margin: auto;
     }
-    .popup__input--job{
+    .popup__input-job{
         width: 100%;
         margin: auto;
     
     }
-    .popup__button--submit {
+    .popup__button-submit {
         width: 100%;
         margin: auto;
     }

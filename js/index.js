@@ -1,13 +1,13 @@
 
 const closeButton = document.querySelector('.popup__close');
-const openButton = document.querySelector('.profile__new__edit__avatar_edit');
+const openButton = document.querySelector('.profile__edit-avatar');
 const overlay = document.querySelector('.popup__overlay');
 const popup = document.querySelector('.popup');
-const newName = document.querySelector('.popup__form_input-name')
-const newJob = document.querySelector('.popup__form_input-job')
-const nameText = document.querySelector('.profile__new__edit__avatar_title');
-const jobText = document.querySelector('.profile__new__edit_subtitle');
-const salve = document.querySelector('.popup__form_bnt-submit');
+const newName = document.querySelector('.popup__input-name')
+const newJob = document.querySelector('.popup__input-job')
+const nameText = document.querySelector('.profile__title');
+const jobText = document.querySelector('.profile__subtitle');
+const salve = document.querySelector('.popup__button-submit');
 const like = document.querySelector('.gallery__elements__element__card_like')
 
 function fecharPopup(){

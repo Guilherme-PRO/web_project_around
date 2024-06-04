@@ -17,14 +17,14 @@
     padding: 0;
     margin: 0;
 }
-.gallery__elements__element{
+.gallery__element{
     margin: auto 0;
     display: flex;
     flex-direction: column;
     border-radius: 10px 10px 10px 10px;
     align-items: center;
 }
-.gallery__elements__element__card{
+.gallery__card{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -35,22 +35,22 @@
     border-radius: 0px 0px 10px 10px;
     width: 100%;
 }
-.gallery__elements__element__card_title{
+.gallery__title{
     display: flex;
     font-family: 'Inter';
     font-size: 1.3em;
     font-weight: 900;
     line-height: 29.05px;
 }
-.gallery__elements__element_img{
+.gallery__img{
     width: 100%;
     height: 100%;
 }
-.gallery__elements__element__card_like{
+.gallery__like{
     margin: auto 0;
     cursor: pointer;
 }
-.gallery__elements__element__card_like:hover{
+.gallery__like:hover{
     opacity: 60%;    
 }
 
@@ -67,14 +67,14 @@
         row-gap: 7px;
         column-gap:5px;
     }
-    .gallery__elements__element{
+    .gallery__element{
        display:flex;
        margin: 0;
     }
-    .gallery__elements__element_img{
+    .gallery__img{
         width: 100%;
     }
-    .gallery__elements__element__card{
+    .gallery__card{
         display: flex;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -83,7 +83,7 @@
         height: 7vh;
 
     }
-    .gallery__elements__element__card_title{
+    .gallery__title{
         display: flex;
         margin: 0;
         font-family: 'Inter';
@@ -91,7 +91,7 @@
         font-weight: 900;
         line-height: 15px;
     }
-    .gallery__elements__element__card_like{
+    .gallery__like{
         width: 2.4vh;
       
     }
@@ -115,17 +115,17 @@
         row-gap: 20px;
         margin:0;
     }
-    .gallery__elements__element{
+    .gallery__element{
         display: flex;
         margin: 0 19px 0;
     }
-    .gallery__elements__element_img{
+    .gallery__img{
         display: flex;
         width: 100%;
         height: 100%;
         margin:0;
     }
-    .gallery__elements__element__card{
+    .gallery__card{
         display: flex;
         position: relative;
         flex-direction: row;
@@ -133,13 +133,13 @@
         height: 10vh;
         margin: 0;
     }
-    .gallery__elements__element__card_title{
+    .gallery__title{
         display: flex;
         font-family: 'Inter';
         font-size: 24px;
         font-weight: 900;
     }
-    .gallery__elements__element__card_like{
+    .gallery__like{
         display: flex;
         width: auto;
     }

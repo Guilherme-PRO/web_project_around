@@ -10,7 +10,7 @@
     width: 100%;
     margin:0;
 }
-.footer__copyright_copy{
+.footer__copy{
     margin: 0;
     font-family: 'Inter';
     font-size: 18px;
@@ -25,7 +25,7 @@
     width: 100%;
     margin:0;
     }
-.footer__copyright_copy{
+.footer__copy{
     margin: 0;
     font-family: 'Inter';
     font-size: 0.8em;
@@ -47,7 +47,7 @@
         display: flex;
         margin: 0 19px 0;
     }
-    .footer__copyright_copy{
+    .footer__copy{
         margin: 0;
         font-family: 'Inter';
         font-size: 0.9em;
