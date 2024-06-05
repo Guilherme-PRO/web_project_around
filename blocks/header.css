@@ -16,7 +16,7 @@
   margin-bottom: 40px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1145px) {
   .header{
     display: flex;
     width: 100%;
@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 880px) {
   
   .header{
     display: flex;

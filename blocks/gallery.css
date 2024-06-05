@@ -51,10 +51,14 @@
     cursor: pointer;
 }
 .gallery__like:hover{
-    opacity: 60%;    
+    opacity: 60%;
+}
+.gallery__like-button{
+    background-color: black;
+
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1145px) {
     .gallery{
         display: flex;
         width: 100%;
@@ -97,7 +101,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 880px) {
     .gallery{
         display: flex;
         flex-direction: column;

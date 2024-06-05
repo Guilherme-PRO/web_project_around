@@ -7,8 +7,9 @@ const newName = document.querySelector('.popup__input-name')
 const newJob = document.querySelector('.popup__input-job')
 const nameText = document.querySelector('.profile__title');
 const jobText = document.querySelector('.profile__subtitle');
-const salve = document.querySelector('.popup__button-submit');
-const like = document.querySelector('.gallery__elements__element__card_like')
+const salve = document.querySelector('.popup__submit');
+const like = document.querySelector('.gallery__like')
+const s2black = document.querySelector('.gallery__like-button')
 
 function fecharPopup(){
     popup.classList.remove("popup__opened")
@@ -30,5 +31,9 @@ function handleFormSubmit (e) {
     
     fecharPopup()
 }
-
 salve.addEventListener("click", handleFormSubmit)
+
+like.addEventListener('click', () => {
+    gallery.classList.add("gallery__like-button")
+    like.getElementsByClassName = s2black.value;
+})

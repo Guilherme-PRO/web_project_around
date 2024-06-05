@@ -19,7 +19,7 @@
     color: #545454;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1145px) {
 .footer__copyright {
     display: flex;
     width: 100%;
@@ -35,7 +35,7 @@
     }    
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 880px) {
     .footer {
         display: flex;
         width: 100%;
