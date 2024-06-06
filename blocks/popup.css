@@ -102,7 +102,7 @@
     cursor: pointer;
     padding: 0;
 }
-.popup__button-submit:hover{
+.popup__submit:hover{
     opacity: 80%;
 }
 
@@ -146,31 +146,30 @@
 }
 
 
-@media screen and (max-width: 700px) {
-    .popup{
-        width: 100%;
-    }
-    .popup__close{
-        width: 20px;
-        height: 20px; 
-        top: -25px;
-        right: 78px;
-    }
-    .popup__form{
-        padding: 0 19px 0;
-        width: 244px;
-        height: 322px;
-    }
-    .popup__title{
-        width: 100%;
-    }
-    .popup__input-name{
-        width: 100%;
-    }
-    .popup__input-job{
-        width: 100%;
-    }
-    .popup__submit {
-        width: 100%;
-    }
+@media screen and (max-width: 780px) {
+.popup{
+    width: 100%;
+}
+.popup__close{
+    width: 25px;
+    top: -25px;
+    right: 78px;
+}
+.popup__form{
+    padding: 0 19px 0;
+    width: 244px;
+    height: 322px;
+}
+.popup__title{
+    width: 100%;
+}
+.popup__input-name{
+    width: 100%;
+}
+.popup__input-job{
+    width: 100%;
+}
+.popup__submit {
+    width: 100%;
+}
 }
