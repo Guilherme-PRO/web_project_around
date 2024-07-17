@@ -34,6 +34,6 @@ function handleFormSubmit (e) {
 salve.addEventListener("click", handleFormSubmit)
 
 like.addEventListener('click', () => {
-    gallery.classList.add("gallery__like-button")
-    like.getElementsByClassName = s2black.value;
-})
+    s2black.classList.toggle("gallery__like-button")
+});
+
