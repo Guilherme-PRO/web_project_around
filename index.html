@@ -9,20 +9,8 @@
         <title>my miusic</title>
         <link rel="stylesheet" href="./pages/index.css" >
         <link rel="stylesheet" href="favicon.ico" >
-        
     </head>
     <body class="page">
-        <section class="popup">
-            <div class="popup__overlay">
-                <img src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close">
-                <form class="popup__form ">
-                    <h2 class="popup__title">Editar perfil</h2>
-                    <input type="text" class="popup__input-name"  placeholder="Nome">
-                    <input type="text" class="popup__input-job"  placeholder="Sobre mim">
-                    <button class="popup__submit">Salvar</button>
-                </form>
-            </div>
-        </section>
         <header class="header">
             <img src="./image/VectorlogoAround.png" alt="logo da magina" class="header__logo">
             <div class="header__line">
@@ -35,58 +23,16 @@
                     <div class="profile__edit">
                         <div class="profile__avatar-name">
                             <h1 class="profile__title">Jacques Cousteau</h1>
-                            <img src="./image/EditButtoncaixaidt.png" alt="btn-edit" class="profile__edit-avatar">
+                            <img type="button" src="./image/EditButtoncaixaidt.png" alt="btn-edit" class="profile__edit-avatar">
                         </div>
                         <h2 class="profile__subtitle">Explorador</h2>
                     </div>
-                    <img src="./image/AddButtoncaixa+.png" alt="btn-adicionar" class="profile__add">
+                    <img src="./image/AddButtoncaixa+.png" alt="btn-adicionar" class="profile__add" id="openTwoButton">
                 </div>
             </section>
             <section class="gallery">
                 <ul class="gallery__elements">
-                    <li class="gallery__element">
-                        <img src="./image/kirill-pershin-1088404-unsplash.png" alt="img-Yosemite" class="gallery__img">
-                        <img src="./image/Groupl1xe1ra.png" alt="lixeira" class="gallery__lixeira">
-                        <div class="gallery__card">
-                            <h2 class="gallery__title">vale de Yosemite</h2>
-                            <img src="./image/Grouplike-button.jpg" alt="like" class="gallery__like">
-                        </div>
-                    </li>
-                    <li class="gallery__element">
-                        <img src="./image/kirill-pershin-1404681-unsplashlagolouise.png" alt="img-louise" class="gallery__img">
-                        <div class="gallery__card">
-                            <h2 class="gallery__title">Lago Louise</h2>
-                            <img src="./image/Grouplike-button.jpg" alt="like" class="gallery__like">
-                        </div>
-                    </li>
-                    <li class="gallery__element">
-                        <img src="./image/kirill-pershin-1556355-unsplashmontanhas.png" alt="img-Montanhas" class="gallery__img">
-                        <div class="gallery__card">
-                            <h2 class="gallery__title">Montanhas Care...</h2>
-                            <img src="./image/Grouplike-button.jpg" alt="like" class="gallery__like">
-                        </div>
-                    </li>
-                    <li class="gallery__element">
-                        <img src="./image/kirill-pershin-1404681-unsplashlaterma.png" alt="img-Latemar" class="gallery__img">
-                        <div class="gallery__card">
-                            <h2 class="gallery__title">Latemar</h2>
-                            <img src="./image/Grouplike-button.jpg" alt="like" class="gallery__like">
-                        </div>
-                    </li>
-                    <li class="gallery__element">
-                        <img src="./image/kirill-pershin-1556355-unsplashparquenacional.png" alt="img-Parque Nacional" class="gallery__img">
-                        <div class="gallery__card">
-                            <h2 class="gallery__title">Parque Nacional...</h2>
-                            <img src="./image/Grouplike-button.jpg" alt="like" class="gallery__like">
-                        </div>
-                    </li>
-                    <li class="gallery__element">
-                        <img src="./image/kirill-pershin-1088404-unsplashlagodibraise.png" alt="img-Lago di Braies" class="gallery__img">
-                        <div class="gallery__card">
-                            <h2 class="gallery__title">Lago di Braies</h2>
-                            <img src="./image/Grouplike-button.jpg" alt="like" class="gallery__like">
-                        </div>
-                    </li>
+                    
                 </ul>
             </section>
         </main>
@@ -95,6 +41,46 @@
                 <p class="footer__copy">&copy;2024 Around the U.S.</p>
             </div>
         </footer>
-        <script src="./js/index.js"></script>
     </body>
+    <template id="template"> 
+        <li class="gallery__element">
+            <img src = "image/Groupl1xe1ra.png" alt="lixeira" class="gallery__lixeira">
+            <img type="button" src="./image/kirill-pershin-1088404-unsplash.png" alt="img-Yosemite" class="gallery__img">
+            <div class="gallery__card">
+                <h2 class="gallery__title">vale de Yosemite</h2>
+                <img src="./image/Vector-like.png" alt="like" class="gallery__like">
+            </div>
+        </li>
+    </template>
+    <div class="popup">
+        <div class="popup__overlay ">
+            <img src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close">
+            <form class="popup__form ">
+                <h2 class="popup__title">Editar perfil</h2>
+                <input type="text" class="popup__input-name"  placeholder="Nome">
+                <input type="text" class="popup__input-job"  placeholder="Sobre mim">
+                <button type="button" class="popup__submit" id="saveButao">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup__create-card popup">
+        <div class="popup__overlay ">
+            <img src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close-two">
+            <form class="popup__form ">
+                <h2 class="popup__title">Novo local</h2>
+                <input type="text" class="popup__input-title"  placeholder="Titulo" id="title">
+                <input type="text" class="popup__input-link"  placeholder="Link de imagem" id="link">
+                <button type="button" class="popup__submit" id="criar">Criar</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup__image-viewer popup">
+        <div class="popup__overlay ">
+            <img src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close-image-viewer">
+            <img src="" alt="" class="popup__image">
+            <h2 class="popup__image-title"></h2>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
 </html>

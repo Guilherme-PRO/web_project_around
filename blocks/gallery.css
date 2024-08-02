@@ -20,52 +20,65 @@
 .gallery__element{
     margin: auto 0;
     display: flex;
+    position: relative;
     flex-direction: column;
     border-radius: 10px 10px 10px 10px;
     align-items: center;
+    overflow: hidden;
 }
 .gallery__card{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    white-space: nowrap;
     align-items: center;
     background-color: #fff;
     color:black;
     border-radius: 0px 0px 10px 10px;
     width: 100%;
 }
-.gallery__title{
+.gallery__title {
     display: flex;
     font-family: 'Inter';
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+    overflow: hidden;
     font-size: 1.3em;
     font-weight: 900;
     line-height: 29.05px;
 }
+
 .gallery__img{
     width: 100%;
-    height: 100%;
+    height:400px;
     z-index: 0;
+    object-fit: cover;
+    cursor: pointer;
 }
 .gallery__lixeira{
-    display: flex;
+    display:flex;
     position:absolute;
+    cursor: pointer;
     z-index: 1;
-    width: 18px;
-    height: 19.3px;
-    top: 100px;
-    left: px; 
-    color: #fff;  
+    top: 18px;
+    right: 12px;
+    transition: 0.2s;
+}
+.gallery__lixeira:hover{
+    transform: scale(1.2);
+    opacity: 60%;
+    
 }
 .gallery__like{
     margin: auto 0;
     cursor: pointer;
+    border: none;
+    transition: 0.3s;
 }
 .gallery__like:hover{
-    opacity: 60%;
+    transform: scale(1.3);
 }
-.gallery__like-button{
-    background-color: black;
+.gallery__like-click{
+    background-image:url(../image/Unions2black.png);
 }
 
 @media screen and (max-width:1145px) {
