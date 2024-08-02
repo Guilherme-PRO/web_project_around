@@ -19,7 +19,7 @@
   * Responsividade para diferentes tamanhos de tela
     - todo o coteudo pode ser acessado em todos os aparelhos celulares, tablets e computadores, do mais menor  ao maior dispositivo que se pode encontrar hoje em dia no mercodo.  
   * Edição de perfil de usuário
-    - nesse app conta tambem com a criancão de seu proprio AVATAR, que é p+ossivel edita-lo da maneira que bem entender( neme , profissão etc..)
+    - nesse app conta tambem com a criancão de seu proprio AVATAR, que é possivel edita-lo da maneira que bem entender( neme , profissão etc..)
   * Galeria de imagens com likes
     - conta tambem com uma espaço que poderam assesar fotos com uma quantidade ifinita e tbm vai ser disponivel para todos os outros usuarios curtir e apreciar os diferentes gostos de cada individou.
 
@@ -39,13 +39,13 @@
     - link
 * body
     - page
-    - section-popup
     - header
     - main
     - section-profile
     - section-gallery
     - footer
 * javaScript 
+    - section-popup
     
 ## Instalação
 
@@ -67,4 +67,4 @@
 
 guilherme. Dutra - @guilherme-PRO - guilhermecarrijo135@gmail.com
 
-Link para o projeto: https://github.com/Guilherme-PRO/web_project_around.git
+Link para o projeto: https://guilherme-pro.github.io/web_project_around/

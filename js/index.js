@@ -16,22 +16,25 @@ const imagePopup = document.querySelector('.popup__image-viewer');
 const imageElement = document.querySelector('.popup__image');
 const imageTitle = document.querySelector('.popup__image-title');
 const closeImageViewerButton = document.querySelector('.popup__close-image-viewer');
+const editProfileForm = document.querySelector('.popup__form');
+const addCardForm = document.querySelector('.popup__form-addCard');
 
-const abrirPopup = () => {
+
+const openpopup = () => {
     closeButton.addEventListener('click', fecharPopup, { once: true });
     popup.classList.add("popup__opened");
     newName.value = nameText.textContent;
     newJob.value = jobText.textContent;
 };
-openButton.addEventListener('click', abrirPopup);
+openButton.addEventListener('click', openpopup);
 
 
-const abrirTwoPopup = () => {
+const openTwoPopup = () => {
     closeButtonTwo.addEventListener('click', fecharPopup, { once: true });    
     popupTwo.classList.add("popup__opened");
 
 };
-openTwoButton.addEventListener('click', abrirTwoPopup)
+openTwoButton.addEventListener('click', openTwoPopup)
 
 
 function fecharPopup(){
@@ -48,7 +51,7 @@ function handleFormSubmit (e) {
 
     fecharPopup()
 };
-salve.addEventListener("click", handleFormSubmit);
+editProfileForm.addEventListener("submit", handleFormSubmit);
 
 const list = document.querySelector(".gallery__elements");
 const initialCards = [
@@ -108,13 +111,13 @@ const initialCards = [
       return 
     }
 
-    const newCard = createCard({name: title.value, link: link.value})
+    const newCard = createCard({name:title.value, link : link.value})
     list.prepend(newCard);
     title.value = '';
     link.value = '';
     fecharPopup()
   }
-  cria.addEventListener('click', function (event) {
+  addCardForm.addEventListener('submit', function (event) {
     event.preventDefault();
     addElement();
   });

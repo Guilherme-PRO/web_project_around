@@ -9,6 +9,12 @@
         <title>my miusic</title>
         <link rel="stylesheet" href="./pages/index.css" >
         <link rel="stylesheet" href="favicon.ico" >
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     </head>
     <body class="page">
         <header class="header">
@@ -44,7 +50,7 @@
     </body>
     <template id="template"> 
         <li class="gallery__element">
-            <img src = "image/Groupl1xe1ra.png" alt="lixeira" class="gallery__lixeira">
+            <img type="button" src = "image/Groupl1xe1ra.png" alt="lixeira" class="gallery__lixeira">
             <img type="button" src="./image/kirill-pershin-1088404-unsplash.png" alt="img-Yosemite" class="gallery__img">
             <div class="gallery__card">
                 <h2 class="gallery__title">vale de Yosemite</h2>
@@ -54,24 +60,24 @@
     </template>
     <div class="popup">
         <div class="popup__overlay ">
-            <img src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close">
+            <img type="button" src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close">
             <form class="popup__form ">
                 <h2 class="popup__title">Editar perfil</h2>
-                <input type="text" class="popup__input-name"  placeholder="Nome">
-                <input type="text" class="popup__input-job"  placeholder="Sobre mim">
-                <button type="button" class="popup__submit" id="saveButao">Salvar</button>
+                <input  type="text" class="popup__input-name"  placeholder="Nome" required>
+                <input type="text" class="popup__input-job"  placeholder="Sobre mim" required>
+                <button type="submit" class="popup__submit" id="saveButao">Salvar</button>
             </form>
         </div>
     </div>
 
     <div class="popup__create-card popup">
         <div class="popup__overlay ">
-            <img src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close-two">
-            <form class="popup__form ">
+            <img type="button" src="./image/CloseIconclosde.png" alt="botão de fechamento" class="popup__close-two">
+            <form class="popup__form popup__form-addCard">
                 <h2 class="popup__title">Novo local</h2>
-                <input type="text" class="popup__input-title"  placeholder="Titulo" id="title">
-                <input type="text" class="popup__input-link"  placeholder="Link de imagem" id="link">
-                <button type="button" class="popup__submit" id="criar">Criar</button>
+                <input type="text" class="popup__input-title"  placeholder="Titulo" id="title" required>
+                <input type="url" class="popup__input-link"  placeholder="Link de imagem" id="link" required>
+                <button type="submit" class="popup__submit" id="criar">Criar</button>
             </form>
         </div>
     </div>
