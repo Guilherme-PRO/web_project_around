@@ -23,7 +23,23 @@
 .popup__overlay {
     display: flex;
     position: relative;
-    width: 34%;
+    width: 468px;
+    height: 330px;
+    margin:auto;
+    flex-direction: column;
+}
+.popup__overlay-card{
+    display: flex;
+    position: relative;
+    width: 468px;
+    height: 330px;
+    margin:auto;
+    flex-direction: column;
+}
+.popup__overlay-viewer{
+    display: flex;
+    position: relative;
+    width: 65%;
     height: 330px;
     margin:auto;
     flex-direction: column;
@@ -42,7 +58,7 @@
     opacity: 60%;
 }
 
-.popup__form {
+.popup__form, .popup__form-addCard {
     display: flex;
     position: relative;
     align-items: center;
@@ -55,13 +71,14 @@
     margin:auto;
     z-index: 100;
     overflow: hidden;
+    padding:0 19px 0 ;
 }
 .popup__title {
     font-family: 'Inter';
     font-size: 24px;
     font-weight: 900;
     line-height: 29.05px;
-    width: 358px;
+    width: 100%;
     height: 23px;
     margin: 34px 0 54px 0;
     color: #000000;
@@ -74,13 +91,15 @@
     font-weight: 100;
     line-height: 14.52px;
     margin: 0;
+    white-space: nowrap; 
 }
 .popup__image{
-    width: 34vw;
-    height: 57vh;
+    width: 65vw;
+    height: 65vh;
+    
     }
 .popup__input-name, .popup__input-title {
-    width: 358px;
+    width: 100%;
     height: 27.26px;
     border: 1px;
     border: none;
@@ -91,7 +110,7 @@
 
 }
 .popup__input-job, .popup__input-link {
-    width: 358px;
+    width: 100%;
     height: 27.26px;
     border: 1px;
     border: none;
@@ -104,7 +123,7 @@
     display: flex;
     position: relative;
     justify-content: center;
-    width: 358px;
+    width: 100%;
     height: 50.15px;
     margin: 0;
     align-items: center;
@@ -133,18 +152,20 @@
     width: 330px;
     height: 330px;
 }
-.popup__overlay {
-    width: 40%;
-    height: 330px;
+.popup__overlay{
+    width: 420px;
+}
+.popup__overlay-card{
+    width: 370px;
+}
+.popup__overlay-viewer{
+    width: 55%;
 }
 .popup__close{
     width: 25px;
     height: 25px;
     top: -35px;
     right: -5px;
-}
-.popup__title{
-    width: 100%;
 }
 .popup__image-title{
     width: 100px;
@@ -156,16 +177,13 @@
     margin: 0;
 }
 .popup__image{
-    width:40vw ;
+    width:55vw ;
     height:60vh ;
     }
 .popup__input-name{
     width: 100%;
 }
 .popup__input-job{
-    width: 100%;
-}
-.popup__submit{
     width: 100%;
 }
 }
@@ -181,20 +199,18 @@
     right: 78px;
 }
 .popup__form{
-    padding: 0 19px 0;
     width: 244px;
     height: 322px;
 }
-.popup__overlay {
-    display: flex;
-    position: relative;
-    width: 39.5%;
-    height: 330px;
-    margin:auto;
-    flex-direction: column;
+.popup__overlay{
+    width: 420px;
 }
-.popup__title{
-    width: 100%;
+.popup__overlay-card{
+    width: 282px;
+    margin: auto;
+}
+.popup__overlay-viewer{
+    width: 34%;
 }
 .popup__image-title{
     width: 100px;
@@ -206,16 +222,13 @@
     margin: 0;
 }
 .popup__image{
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 35vh;
     }
 .popup__input-name{
     width: 100%;
 }
 .popup__input-job{
-    width: 100%;
-}
-.popup__submit {
     width: 100%;
 }
 }

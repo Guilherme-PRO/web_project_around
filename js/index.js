@@ -1,14 +1,13 @@
 
 const closeButton = document.querySelector('.popup__close');
 const openButton = document.querySelector('.profile__edit-avatar');
-const overlay = document.querySelector('.popup__overlay');
 const popup = document.querySelector('.popup');
 const popupTwo = document.querySelector('.popup__create-card');
 const newName = document.querySelector('.popup__input-name');
 const newJob = document.querySelector('.popup__input-job');
 const nameText = document.querySelector('.profile__title');
 const jobText = document.querySelector('.profile__subtitle');
-const salve = document.querySelector('#saveButao');
+const salve = document.querySelector('#savebutton');
 const openTwoButton = document.querySelector('.profile__add');
 const closeButtonTwo = document.querySelector('.popup__close-two')
 const cria = document.querySelector('#criar')
@@ -21,7 +20,7 @@ const addCardForm = document.querySelector('.popup__form-addCard');
 
 
 const openpopup = () => {
-    closeButton.addEventListener('click', fecharPopup, { once: true });
+    closeButton.addEventListener('click', closePopup, { once: true });
     popup.classList.add("popup__opened");
     newName.value = nameText.textContent;
     newJob.value = jobText.textContent;
@@ -30,14 +29,14 @@ openButton.addEventListener('click', openpopup);
 
 
 const openTwoPopup = () => {
-    closeButtonTwo.addEventListener('click', fecharPopup, { once: true });    
+    closeButtonTwo.addEventListener('click', closePopup, { once: true });    
     popupTwo.classList.add("popup__opened");
 
 };
 openTwoButton.addEventListener('click', openTwoPopup)
 
 
-function fecharPopup(){
+function closePopup(){
     popup.classList.remove("popup__opened");
     popupTwo.classList.remove("popup__opened");
     imagePopup.classList.remove("popup__opened");
@@ -49,7 +48,7 @@ function handleFormSubmit (e) {
     nameText.textContent = newName.value;
     jobText.textContent = newJob.value;
 
-    fecharPopup()
+    closePopup()
 };
 editProfileForm.addEventListener("submit", handleFormSubmit);
 
@@ -106,16 +105,11 @@ const initialCards = [
     const title = document.querySelector('#title');
     const link = document.querySelector('#link');
 
-    if (title.value == '' || link.value == '') {
-      alert ('Por favor, digita nos campos o valor corretamente!')
-      return 
-    }
-
     const newCard = createCard({name:title.value, link : link.value})
     list.prepend(newCard);
     title.value = '';
     link.value = '';
-    fecharPopup()
+    closePopup()
   }
   addCardForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -123,7 +117,7 @@ const initialCards = [
   });
   
   const openImageViewer = (title, link) => {
-    closeImageViewerButton.addEventListener('click', fecharPopup, { once: true });    
+    closeImageViewerButton.addEventListener('click', closePopup, { once: true });    
     imagePopup.classList.add('popup__opened')
     imageTitle.textContent = title;
     imageElement.src = link;
