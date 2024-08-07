@@ -40,7 +40,7 @@
     display: flex;
     position: relative;
     width: 65%;
-    height: 65%;
+    height: 75%;
     margin:auto;
     flex-direction: column;
 }
@@ -95,7 +95,7 @@
 }
 .popup__image{
     width: 65vw;
-    height: 65vh;
+    height: 75vh;
     
     }
 .popup__input-name, .popup__input-title {
