@@ -40,7 +40,7 @@
     display: flex;
     position: relative;
     width: 65%;
-    height: 330px;
+    height: 65%;
     margin:auto;
     flex-direction: column;
 }
@@ -90,7 +90,7 @@
     font-size: 12px;
     font-weight: 100;
     line-height: 14.52px;
-    margin: 0;
+
     white-space: nowrap; 
 }
 .popup__image{
