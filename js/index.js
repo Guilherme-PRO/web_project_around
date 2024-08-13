@@ -97,6 +97,13 @@ const initialCards = [
     return cardItem
   };
   
+  const openImageViewer = (title, link) => {
+    closeImageViewerButton.addEventListener('click', closePopup, { once: true });    
+    imagePopup.classList.add('popup__opened')
+    imageTitle.textContent = title;
+    imageElement.src = link;
+  };
+  
   for ( const item of initialCards) {
     list.append(createCard(item))
   };
@@ -116,12 +123,6 @@ const initialCards = [
     addElement();
   });
   
-  const openImageViewer = (title, link) => {
-    closeImageViewerButton.addEventListener('click', closePopup, { once: true });    
-    imagePopup.classList.add('popup__opened')
-    imageTitle.textContent = title;
-    imageElement.src = link;
-  };
  
   
 

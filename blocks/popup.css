@@ -12,36 +12,28 @@
     z-index: 100;
     opacity: 0;
 }
-
 .popup__opened {
     visibility: visible;
     opacity: 1;
     z-index: 100;
    
 }
-
 .popup__overlay {
     display: flex;
     position: relative;
-    width: 468px;
-    height: 330px;
     margin:auto;
     flex-direction: column;
 }
 .popup__overlay-card{
     display: flex;
     position: relative;
-    width: 468px;
-    height: 330px;
     margin:auto;
     flex-direction: column;
 }
 .popup__overlay-viewer{
     display: flex;
     position: relative;
-    width: 65%;
-    height: 75%;
-    margin:auto;
+    margin:auto ;
     flex-direction: column;
 }
 .popup__close, .popup__close-two, .popup__close-image-viewer {
@@ -53,8 +45,7 @@
     top: -40px;
     right: -45px;
 }
-
-.popup__close:hover, .popup__close-two:hover {
+.popup__close:hover, .popup__close-two:hover, .popup__close-image-viewer:hover {
     opacity: 60%;
 }
 
@@ -90,13 +81,11 @@
     font-size: 12px;
     font-weight: 100;
     line-height: 14.52px;
-
     white-space: nowrap; 
 }
 .popup__image{
-    width: 65vw;
-    height: 75vh;
-    
+    max-width: 75vw;
+    max-height: 75vh;
     }
 .popup__input-name, .popup__input-title {
     width: 100%;
@@ -152,34 +141,16 @@
     width: 330px;
     height: 330px;
 }
-.popup__overlay{
-    width: 420px;
+.popup__image{
+    max-width: 45vw;
+    max-height: 75vh;
 }
-.popup__overlay-card{
-    width: 370px;
-}
-.popup__overlay-viewer{
-    width: 55%;
-}
-.popup__close{
+.popup__close, .popup__close-two,  .popup__close-image-viewer{
     width: 25px;
     height: 25px;
     top: -35px;
-    right: -5px;
+    right: -30px;
 }
-.popup__image-title{
-    width: 100px;
-    height: 12px; 
-    font-family: 'Inter';
-    font-size: 12px;
-    font-weight: 100;
-    line-height: 14.52px;
-    margin: 0;
-}
-.popup__image{
-    width:55vw ;
-    height:60vh ;
-    }
 .popup__input-name{
     width: 100%;
 }
@@ -188,43 +159,23 @@
 }
 }
 
-
 @media screen and (max-width: 780px) {
 .popup{
     width: 100%;
 }
-.popup__close{
+.popup__close, .popup__close-two,  .popup__close-image-viewer{
     width: 25px;
-    top: -25px;
-    right: 78px;
+    top: -29px;
+    right: 13px;
 }
 .popup__form{
     width: 244px;
     height: 322px;
 }
-.popup__overlay{
-    width: 420px;
-}
-.popup__overlay-card{
-    width: 282px;
-    margin: auto;
-}
-.popup__overlay-viewer{
-    width: 34%;
-}
-.popup__image-title{
-    width: 100px;
-    height: 12px; 
-    font-family: 'Inter';
-    font-size: 12px;
-    font-weight: 100;
-    line-height: 14.52px;
-    margin: 0;
-}
 .popup__image{
-    width: 98%;
-    height: 35vh;
-    }
+    max-width: 245px;
+    max-height: 75vh;
+}
 .popup__input-name{
     width: 100%;
 }
