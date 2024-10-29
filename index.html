@@ -61,7 +61,7 @@
     <div class="popup" id="popupOne">
         <div class="popup__overlay ">
             <img type="button" src="./image/CloseIconclosde.png" alt="closeButton" id="close-one" class="popup__close">
-            <form class="popup__form" id="popup__form" name="formName" novalidate>
+            <form class="popup__form" id="popup__form" name="formName">
                 <h2 class="popup__title">Editar perfil</h2>
                 <input id="name" type="text" class="popup__input"  placeholder="Name" minlength="2" maxlength="40" autocomplete="username" required>
                 <span class="popup__input_error name-error"></span>
@@ -75,13 +75,13 @@
     <div class="popup" id="popupTow">
         <div class="popup__overlay">
             <img type="button" src="./image/CloseIconclosde.png" alt="closeButton" id="close-two" class="popup__close">
-            <form class="popup__form" id="form-addCard" name="formAdd" novalidate>
+            <form class="popup__form" id="form-addCard" name="formAdd">
                 <h2 class="popup__title">Novo local</h2>
                 <input id="title" type="text" class="popup__input"  placeholder="Title" minlength="2" maxlength="40" autocomplete="text" required>
                 <span class="popup__input_error title-error"></span>
                 <input id="link" type="url" class="popup__input"  placeholder="Link the imagen" minlength="2" maxlength="200" autocomplete="url" required>
                 <span class="popup__input_error link-error"></span>
-                <button type="submit" class="popup__submit" id="create">Criar</button>
+                <button disabled type="submit" class="popup__submit" id="create">Criar</button>
             </form>
         </div>
     </div>

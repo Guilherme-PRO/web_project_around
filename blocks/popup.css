@@ -10,7 +10,6 @@
 .popup__opened {
     display: flex;
     opacity: 1;
-    align-items: center;
 }
 .popup__overlay {
     margin:auto;
@@ -31,7 +30,6 @@
 
 .popup__form {
     display: flex;
-    align-items: center;
     flex-direction: column;
     background: #fff;
     max-width: 880px;
@@ -69,12 +67,13 @@
     border-bottom: 1px solid red;
 }
 .popup__error_visible{  
-    margin-bottom: 5px;
+    text-align: left;
     font-family: 'Inter';
+    color: red;
+    margin-bottom: 5px;
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
-    color: red;
 }
 .popup__input {
     width: 100%;
