@@ -24,6 +24,7 @@
     border-radius: 10px 10px 10px 10px;
     align-items: center;
     overflow: hidden;
+    max-width: 1000px;
 }
 .gallery__card{
     display: flex;
@@ -33,6 +34,7 @@
     background-color: #fff;
     color:black;
     border-radius: 0px 0px 10px 10px;
+    max-width: 1000px;
     width: 100%;
 }
 .gallery__title {
