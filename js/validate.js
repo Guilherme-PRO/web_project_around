@@ -3,7 +3,6 @@ function enableValidation(element){
 const formElement = document.forms[element.formSelector];
 const inputElements = Array.from(formElement.querySelectorAll(element.inputSelector));
 const button = formElement.querySelector(element.submitButtonSelector);
-console.log(inputElements);
 
 const checkInputValidity = (input) => {
   if(!input.validity.valid){
