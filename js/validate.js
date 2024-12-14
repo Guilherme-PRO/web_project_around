@@ -1,9 +1,9 @@
-
+/*
 function enableValidation(element){
 const formElement = document.forms[element.formSelector];
 const inputElements = Array.from(formElement.querySelectorAll(element.inputSelector));
 const button = formElement.querySelector(element.submitButtonSelector);
-console.log(inputElements);
+
 
 const checkInputValidity = (input) => {
   if(!input.validity.valid){
@@ -47,23 +47,23 @@ const validationButton = (inputs) => {
 
 formElement.addEventListener("submit", function (evt) {
   evt.preventDefault()
-});
-
+  });
 };
 
 enableValidation({
   formSelector: "formName",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__submit",
-    inactiveButtonClass: "popup__button_disabled",
-    inputErrorClass: "popup__input_error",
-    errorClass: "popup__error_visible"
-  });
-  enableValidation({
-    formSelector: "formAdd",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__submit",
-    inactiveButtonClass: "popup__button_disabled",
-    inputErrorClass: "popup__input_error",
-    errorClass: "popup__error_visible"
-  });
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__submit",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_error",
+  errorClass: "popup__error_visible"
+});
+enableValidation({
+  formSelector: "formAdd",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__submit",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_error",
+  errorClass: "popup__error_visible"
+});
+*/
