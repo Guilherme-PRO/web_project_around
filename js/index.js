@@ -1,4 +1,4 @@
-import Card from "./card.js";
+import Card from "./CAD.js";
 import FormValidator from "./FormValidator.js"
 
 const form1 = new FormValidator({
