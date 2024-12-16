@@ -1,3 +1,30 @@
+import Card from "./card.js";
+import FormValidator from "./FormValidator.js"
+
+const form1 = new FormValidator({
+  config : {
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__submit",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_error",
+    errorClass: "popup__error_visible"
+  }, 
+  formSelector: "#popup__form"
+})
+form1.enableValidation()
+
+const form2 = new FormValidator({
+  config : {
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__submit",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_error",
+    errorClass: "popup__error_visible"
+  }, 
+  formSelector: "#form-addCard"
+})
+form2.enableValidation()
+
 
 const closeButton = document.querySelector('#close-one');
 const openButton = document.querySelector('.profile__edit-avatar');
@@ -7,17 +34,25 @@ const newName = document.querySelector('#name');
 const newJob = document.querySelector('#job');
 const nameText = document.querySelector('.profile__title');
 const jobText = document.querySelector('.profile__subtitle');
-const salve = document.querySelector('#savebutton');
 const openTwoButton = document.querySelector('.profile__add');
 const closeButtonTwo = document.querySelector('#close-two')
-const cria = document.querySelector('#create')
 const imagePopup = document.querySelector('#image-viewer');
 const imageElement = document.querySelector('.popup__image');
 const imageTitle = document.querySelector('.popup__image-title');
 const closeImageViewerButton = document.querySelector('#close-image');
 const editProfileForm = document.querySelector('#popup__form');
 const addCardForm = document.querySelector('#form-addCard');
+const title = document.querySelector('#title');
+const link = document.querySelector('#link');
 
+const openImageViewer = (title, link) => {
+  closeImageViewerButton.addEventListener('click', closePopup, { once: true });    
+  imagePopup.classList.add('popup__opened')
+  imageTitle.textContent = title;
+  imageElement.src = link;
+  closeClickOutside(imagePopup); 
+  closeOnEscapeKey(imagePopup)
+};
 
 const openOnePopup = () => {
   closeButton.addEventListener('click', closePopup, { once: true });
@@ -96,41 +131,18 @@ const initialCards = [
       name: "Lago di Braies",
       link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
     }
-  ];
-  
-function createCard(card) {
-  const templateContent = document.querySelector('#template').content;
-  const cardItem = templateContent.querySelector('.gallery__element').cloneNode(true); 
-  cardItem.querySelector('.gallery__title').textContent = card.name;
-  cardItem.querySelector('.gallery__img').setAttribute('src', card.link);
-  cardItem.querySelector('.gallery__img').setAttribute('alt', card.name);
-  cardItem.querySelector('.gallery__like').addEventListener('click', function (event) {
-    event.target.classList.toggle('gallery__like-click');
-  });
-  cardItem.querySelector('.gallery__lixeira').addEventListener('click', function (event) {
-    const cardDelety = event.target.parentElement
-    cardDelety.remove();
-  });  
-  const openImageViewer = (title, link) => {
-    closeImageViewerButton.addEventListener('click', closePopup, { once: true });    
-    imagePopup.classList.add('popup__opened')
-    imageTitle.textContent = title;
-    imageElement.src = link;
-    closeClickOutside(imagePopup); 
-    closeOnEscapeKey(imagePopup)
-  };
-    cardItem.querySelector('.gallery__img').addEventListener('click', () => openImageViewer(card.name, card.link));
-    return cardItem;
-};
+];
 
 for ( const item of initialCards) {
-    list.append(createCard(item))
+    list.append(new Card({
+      card:item,
+      cardSelector:"#template",
+      openImagePopup: (title, link) => openImageViewer(title, link)
+    }).generateCard())
 };
-  
+
 function addElement() {
-  const title = document.querySelector('#title');
-  const link = document.querySelector('#link');
-  const newCard = createCard({name:title.value, link : link.value})
+  const newCard = new Card({card:{name:title.value, link:link.value}, cardSelector:"#template", openImagePopup: (title, link) => openImageViewer(title, link)}).generateCard();
   list.prepend(newCard);
   title.value = '';
   link.value = '';
