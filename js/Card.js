@@ -5,7 +5,7 @@ export default class Card{
         this._openImagePopup = openImagePopup
         
     }
-
+    
     _getTemplate(){
         const templateContent = document.querySelector(this._cardSelector).content.querySelector('.gallery__element').cloneNode(true);
         return templateContent;
