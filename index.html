@@ -51,9 +51,9 @@
     <template id="template"> 
         <li class="gallery__element">
             <img type="button" src = "image/Groupl1xe1ra.png" alt="lixeira" class="gallery__lixeira">
-            <img type="button" src="" alt="" class="gallery__img">
+            <img type="button" src=" " alt=" " class="gallery__img">
             <div class="gallery__card">
-                <h2 class="gallery__title">vale de Yosemite</h2>
+                <h2 class="gallery__title"> </h2>
                 <img src="./image/Vector-like.png" alt="like" class="gallery__like">
             </div>
         </li>
@@ -63,23 +63,22 @@
             <img type="button" src="./image/CloseIconclosde.png" alt="closeButton" id="close-one" class="popup__close">
             <form class="popup__form" id="popup__form" name="formName">
                 <h2 class="popup__title">Editar perfil</h2>
-                <input id="name" type="text" class="popup__input"  placeholder="Name" minlength="2" maxlength="40" autocomplete="username" required>
+                <input id="name" name="name" type="text" class="popup__input"  placeholder="Name" minlength="2" maxlength="40" autocomplete="username" required>
                 <span class="popup__input_error name-error"></span>
-                <input id="job" type="text" class="popup__input "  placeholder="about me" minlength="2" maxlength="200" autocomplete="username" required>
+                <input id="job" name="about" type="text" class="popup__input "  placeholder="about me" minlength="2" maxlength="200" autocomplete="username" required>
                 <span class="popup__input_error job-error"></span>
                 <button disabled type="submit" class="popup__submit" id="savebutton">Salvar</button>
             </form>
         </div>
     </div>
-
-    <div class="popup" id="popupTow">
+    <div class="popup" id="popupTwo">
         <div class="popup__overlay">
             <img type="button" src="./image/CloseIconclosde.png" alt="closeButton" id="close-two" class="popup__close">
             <form class="popup__form" id="form-addCard" name="formAdd">
                 <h2 class="popup__title">Novo local</h2>
-                <input id="title" type="text" class="popup__input"  placeholder="Title" minlength="2" maxlength="40" autocomplete="text" required>
+                <input id="title" name="name" type="text" class="popup__input"  placeholder="Title" minlength="2" maxlength="40" autocomplete="text" required>
                 <span class="popup__input_error title-error"></span>
-                <input id="link" type="url" class="popup__input"  placeholder="Link the imagen" minlength="2" maxlength="200" autocomplete="url" required>
+                <input id="link" name="link" type="url" class="popup__input"  placeholder="Link the imagen" minlength="2" maxlength="200" autocomplete="url" required>
                 <span class="popup__input_error link-error"></span>
                 <button disabled type="submit" class="popup__submit" id="create">Criar</button>
             </form>
@@ -88,8 +87,8 @@
     <div class="popup" id="image-viewer">
         <div class="popup__overlay ">
             <img src="./image/CloseIconclosde.png" alt="closeButton" id="close-image" class="popup__close">
-            <img src="" alt="" class="popup__image">
-            <h2 class="popup__image-title"></h2>
+            <img src=" " alt=" " class="popup__image">
+            <h2 class="popup__image-title"> </h2>
         </div>
     </div>
     <script type="module" src="./js/index.js"></script>

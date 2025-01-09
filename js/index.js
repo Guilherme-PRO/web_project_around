@@ -1,106 +1,106 @@
 import Card from "./Card.js";
-import FormValidator from "./FormValidator.js"
-import { 
-  link,
-  openButton,
-  openTwoButton,
-  imagePopup,
-  imageElement,
-  imageTitle,
-  closeImageViewerButton,
-  editProfileForm,
-  addCardForm,
-  title,
-  openOnePopup,
-  openTwoPopup,
-  closeClickOutside,
-  closeOnEscapeKey,
-  closePopup,
-  handleFormSubmit
-} from "./utils.js";
+import FormValidator from "./FormValidator.js";
+import Section from "./Section.js";
+import PopupWithImage from "./PopupWithImage.js";
+import PopupWithForm from "./PopupWithForm.js";
+import UserInfo from "./UserInfo.js";
 
-editProfileForm.addEventListener("submit", handleFormSubmit);
-openTwoButton.addEventListener('click', openTwoPopup)
-openButton.addEventListener('click', openOnePopup);
+const userInfo = new UserInfo({
+  name: ".profile__title",
+  about: ".profile__subtitle",
+});
 
-const formUser = new FormValidator({
-  config : {
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__submit",
-    inactiveButtonClass: "popup__button_disabled",
-    inputErrorClass: "popup__input_error",
-    errorClass: "popup__error_visible"
-  }, 
-  formSelector: "#popup__form"
-})
-formUser.enableValidation()
+const profileForm = new PopupWithForm({
+  selector: "#popupOne",
+  formSelector: ".popup__form",
+  callback: (value) => userInfo.setUserInfo(value.name, value.about),
+  buttonSelector: ".profile__edit-avatar",
+});
+profileForm.setEventListeners();
 
-const formCard = new FormValidator({
-  config : {
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__submit",
-    inactiveButtonClass: "popup__button_disabled",
-    inputErrorClass: "popup__input_error",
-    errorClass: "popup__error_visible"
-  }, 
-  formSelector: "#form-addCard"
-})
-formCard.enableValidation()
+const addCardForm = new PopupWithForm({
+  selector: "#popupTwo",
+  formSelector: ".popup__form",
+  callback: (value) => renderCard(value),
+  buttonSelector: ".profile__add",
+});
+addCardForm.setEventListeners();
 
-const list = document.querySelector(".gallery__elements");
-  const initialCards = [
-    {
-      name: "Vale de Yosemite",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
-    },
-    {
-      name: "Lago Louise",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
-    },
-    {
-      name: "Montanhas Carecas",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg"
-    },
-    {
-      name: "Latemar",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
-    },
-    {
-        name: "Parque Nacional da Vanoise ",
-        link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg"
-      },
-      {
-        name: "Lago di Braies",
-        link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
-      }
+const popupWithImage = new PopupWithImage({
+  selector: "#image-viewer",
+  imagen: ".popup__image",
+  caption: ".popup__image-title",
+});
+popupWithImage.setEventListeners();
+
+const initialCards = [
+  {
+    name: "Vale de Yosemite",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
+  },
+  {
+    name: "Lago Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
+  },
+  {
+    name: "Montanhas Carecas",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
+  },
+  {
+    name: "Latemar",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg",
+  },
+  {
+    name: "Parque Nacional da Vanoise ",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg",
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
+  },
 ];
 
-const openImageViewer = (title, link) => {
-  closeImageViewerButton.addEventListener('click', closePopup, { once: true });    
-  imagePopup.classList.add('popup__opened')
-  imageTitle.textContent = title;
-  imageElement.src = link;
-  closeClickOutside(imagePopup); 
-  closeOnEscapeKey(imagePopup)
-};
+const section = new Section(
+  {
+    items: initialCards,
+    renderer: renderCard,
+  },
+  ".gallery__elements"
+);
+section.renderItens();
 
-for ( const item of initialCards) {
-  list.append(new Card({
-    card:item,
-    cardSelector:"#template",
-    openImagePopup: (title, link) => openImageViewer(title, link)
-  }).generateCard())
-};
-
-function addElement() {
-  const newCard = new Card({card:{name:title.value, link:link.value}, cardSelector:"#template", openImagePopup: (title, link) => openImageViewer(title, link)}).generateCard();
-  list.prepend(newCard);
-  title.value = '';
-  link.value = '';
-  closePopup()
+function renderCard(card) {
+  const newCard = new Card({
+    card: card,
+    cardSelector: "#template",
+    openImagePopup: (title, link) => popupWithImage.open({src:link , caption:title }),
+    handleLikeClick: ".gallery__like",
+    handleDeleteClick: ".gallery__delete",
+  }).generateCard();
+  section.addItem(newCard);
 }
 
-addCardForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  addElement();
+
+const formUser = new FormValidator({
+  config: {
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__submit",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_error",
+    errorClass: "popup__error_visible",
+  },
+  formSelector: "#popup__form",
 });
+formUser.enableValidation();
+
+const formCard = new FormValidator({
+  config: {
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__submit",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_error",
+    errorClass: "popup__error_visible",
+  },
+  formSelector: "#form-addCard",
+});
+formCard.enableValidation();
