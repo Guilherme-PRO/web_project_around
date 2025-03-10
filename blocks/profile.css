@@ -6,15 +6,34 @@
 }
 .profile__new{
     display: flex;
+    position: relative;
     align-items: center;
     width: 100%;
     gap: 25px;
 }
-.profile__avatar{
-    
-    background: #C4C4C4;
+.profile__photo{
+position: relative;
+width: 120px;
+}
+.profile__photo:hover .profile__photo-avatar{
+    opacity: 0.6;
+}
+.profile__photo-avatar{
+    cursor: pointer;
     border-radius: 50%;
     width: 120px;
+    height: 120px;
+}
+.profile__photo-perfil{
+    position: absolute;
+    cursor: pointer;
+    padding: auto;
+    opacity: 0;
+    right: 45px;
+    bottom: 50px;
+}
+.profile__photo-perfil:hover{
+    opacity: 1;
 }
 .profile__edit{
     display:flex;

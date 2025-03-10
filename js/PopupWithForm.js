@@ -1,11 +1,12 @@
 import Popup from "./Popup.js";
 export default class PopupWithForm extends Popup {
-  constructor({ selector, callback, formSelector, buttonSelector }) {
+  constructor({ selector, callback, formSelector, buttonSelector, deleteCard }) {
     super({ selector });
     this._callback = callback;
     this._form = document.querySelector(selector);
     this._formSelector = formSelector;
     this._button = document.querySelector(buttonSelector);
+    this._deleteCard = deleteCard;
   }
 
   _getInputValues() {
@@ -26,7 +27,6 @@ export default class PopupWithForm extends Popup {
       evt.preventDefault();
       const values = this._getInputValues();
       this._callback(values);
-      this.close();
     });
     if (this._button) {
       this._button.addEventListener("click", () => {

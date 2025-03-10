@@ -1,16 +1,20 @@
 export default class Card {
   constructor({
-    card,
-    cardSelector,
-    openImagePopup,
-    handleLikeClick,
-    handleDeleteClick,
-  }) {
+    card, cardSelector, openImagePopup, handleLikeClick, handleDeleteClick}) {
     this._card = card;
     this._cardSelector = cardSelector;
     this._openImagePopup = openImagePopup;
     this._handleLikeClick = handleLikeClick;
     this._handleDeleteClick = handleDeleteClick;
+    this._isLiked = card.isLiked
+  }
+
+  _likeIcon(){
+    if (this._isLiked) {
+      this._element.querySelector(".gallery__like").classList.add("gallery__like-click");
+    } else {
+      this._element.querySelector(".gallery__like").classList.remove("gallery__like-click")
+    }
   }
 
   _getTemplate() {
@@ -22,22 +26,33 @@ export default class Card {
   }
 
   _setListListeners() {
-    this._element
-      .querySelector(".gallery__like")
-      .addEventListener("click", (event) => {
-        event.target.classList.toggle("gallery__like-click");
+      this._element.querySelector(".gallery__like").addEventListener("click", (event) => {
+        console.log("jjj")
+        event.preventDefault();
+        if (typeof this._handleLikeClick === "function") {
+          this._handleLikeClick(this._card, this._element.querySelector(".gallery__like"))
+        }
+        
       });
+
     this._element
       .querySelector(".gallery__lixeira")
-      .addEventListener("click", (event) => {
-        const cardDelety = event.target.parentElement;
-        cardDelety.remove();
+      .addEventListener("click", () => {
+        if(typeof this._handleDeleteClick === "function"){
+          this._handleDeleteClick(this._card, this._element)
+        }
       });
+      
     this._element
       .querySelector(".gallery__img")
       .addEventListener("click", () => {
         this._openImageViewer(this._card.name, this._card.link);
       });
+  }
+
+  deletcard(){
+    const deletcard = this._element;
+    deletcard.remove()
   }
 
   _openImageViewer(title, link) {
@@ -48,6 +63,7 @@ export default class Card {
     this._element = this._getTemplate();
     this._element.querySelector(".gallery__title").textContent =
       this._card.name;
+    this._likeIcon();
     this._element
       .querySelector(".gallery__img")
       .setAttribute("src", this._card.link);

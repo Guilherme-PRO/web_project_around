@@ -25,13 +25,16 @@
         <main class="main">
             <section class="profile">
                 <div class="profile__new">
-                    <img src="./image/imageperfil02.png" alt="foto-avatar" class="profile__avatar">
+                    <div class="profile__photo">
+                        <img src="./image/imageperfil02.png" alt="foto-avatar" class="profile__photo-avatar" id="perfil">
+                        <img type="button" src="./image/Vector.png" alt="foto-avatar" class="profile__photo-perfil">
+                    </div>
                     <div class="profile__edit">
                         <div class="profile__avatar-name">
-                            <h1 class="profile__title">Jacques Cousteau</h1>
+                            <h1 class="profile__title"> </h1>
                             <img type="button" src="./image/EditButtoncaixaidt.png" alt="btn-edit" class="profile__edit-avatar">
                         </div>
-                        <h2 class="profile__subtitle">Explorador</h2>
+                        <h2 class="profile__subtitle"> </h2>
                     </div>
                     <img src="./image/AddButtoncaixa+.png" alt="btn-adicionar" class="profile__add" id="openTwoButton">
                 </div>
@@ -89,6 +92,26 @@
             <img src="./image/CloseIconclosde.png" alt="closeButton" id="close-image" class="popup__close">
             <img src=" " alt=" " class="popup__image">
             <h2 class="popup__image-title"> </h2>
+        </div>
+    </div>
+    <div class="popup" id="esclude">
+        <div class="popup__overlay">
+            <img type="button" src="./image/CloseIconclosde.png" alt="closeButton" id="close-two" class="popup__close">
+            <form class="popup__esclude" id="form-esclude" name="formEsclude">
+                <h2 class="popup__title">Tem certeza?</h2>
+                <button type="submit" class="popup__submit" id="lixeira">Sim</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup" id="photoPerfil">
+        <div class="popup__overlay">
+            <img type="button" src="./image/CloseIconclosde.png" alt="closeButton" id="close-two" class="popup__close">
+            <form class="popup__form" id="form-photoPerfil" name="formphotoPerfil">
+                <h2 class="popup__title">alterar a foto do perfil</h2>
+                <input id="links" name="link" type="url" class="popup__input"  placeholder="Link the imagen" minlength="2" maxlength="200" autocomplete="url" required>
+                <span class="popup__input-error links-error">Link</span>
+                <button type="submit" class="popup__submit" id="submit-pefil">Sim</button>
+            </form>
         </div>
     </div>
     <script type="module" src="./js/index.js"></script>
