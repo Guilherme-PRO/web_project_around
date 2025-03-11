@@ -1,11 +1,11 @@
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
-import Section from "./Section.js";
-import PopupWithImage from "./PopupWithImage.js";
-import PopupWithForm from "./PopupWithForm.js";
-import UserInfo from "./UserInfo.js";
-import Api from "./APIs.js";
-import PopupWithConfirmation from "./PopupWithConfirmation.js";
+import Card from "../componets/Card.js";
+import FormValidator from "../componets/FormValidator.js";
+import Section from "../componets/Section.js";
+import PopupWithImage from "../componets/PopupWithImage.js";
+import PopupWithForm from "../componets/PopupWithForm.js";
+import UserInfo from "../componets/UserInfo.js";
+import Api from "../componets/APIs.js";
+import PopupWithConfirmation from "../componets/PopupWithConfirmation.js";
 
 // ----------------------------API------------------------------------//
 
