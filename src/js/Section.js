@@ -7,7 +7,7 @@ export default class Section{
 
     addItem(card){
         const section = document.querySelector(this._selector)
-        section.append(card);
+        section.prepend(card);
     }
 
     renderItens(){

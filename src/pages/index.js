@@ -1,11 +1,11 @@
-import Card from "../componets/Card.js";
-import FormValidator from "../componets/FormValidator.js";
-import Section from "../componets/Section.js";
-import PopupWithImage from "../componets/PopupWithImage.js";
-import PopupWithForm from "../componets/PopupWithForm.js";
-import UserInfo from "../componets/UserInfo.js";
-import Api from "../componets/APIs.js";
-import PopupWithConfirmation from "../componets/PopupWithConfirmation.js";
+import Card from "../js/Card.js";
+import FormValidator from "../js/FormValidator.js";
+import Section from "../js/Section.js";
+import PopupWithImage from "../js/PopupWithImage.js";
+import PopupWithForm from "../js/PopupWithForm.js";
+import UserInfo from "../js/UserInfo.js";
+import Api from "../js/APIs.js";
+import PopupWithConfirmation from "../js/PopupWithConfirmation.js";
 
 // ----------------------------API------------------------------------//
 
@@ -38,7 +38,7 @@ api.getUser().then(res => {
 const avata = new UserInfo({
   avatar: ".profile__photo-avatar"
 })
-api.perfil().then(res => {
+api.getPhotoPerfil().then(res => {
   if(!res.ok){
     return Promise.reject(`Erro: ${res.status}`);
   }
@@ -192,8 +192,8 @@ function toggleLike(card, cardElement) {
 //-----------------GETCards--------------------------------//
 
 api.getCards().then(res =>{
-  if(res.status !== 200){
-    return Promise.reject(res);
+  if(!res.ok){
+    return Promise.reject(res.status);
   }
   return res.json();
 }).then((cards) =>{

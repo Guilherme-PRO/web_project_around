@@ -27,7 +27,6 @@ export default class Card {
 
   _setListListeners() {
       this._element.querySelector(".gallery__like").addEventListener("click", (event) => {
-        console.log("jjj")
         event.preventDefault();
         if (typeof this._handleLikeClick === "function") {
           this._handleLikeClick(this._card, this._element.querySelector(".gallery__like"))

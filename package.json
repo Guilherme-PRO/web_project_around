@@ -4,6 +4,8 @@
   "description": "Education",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,5 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "uuid": "11.0.3"
+  },
+  "devDependencies": {
+    "gh-pages": "6.3.0"
   }
 }

@@ -19,7 +19,7 @@ export default class Api {
     });
   }
 
-  perfil(){
+  getPhotoPerfil(){
     return fetch(`${this._baseUrl}/users/me`, {
       method:"GET",
       headers: this._headers
